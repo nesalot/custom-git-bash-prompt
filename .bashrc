@@ -8,11 +8,6 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # History control
 HISTSIZE=10000
 HISTFILESIZE=20000
-HISTCONTROL=ignoreboth
-
-#append to history, don't overwrite
-shopt -s histappend
-
 
 # Color definitions (without PS1 escaping brackets)
 RED="\033[0;31m"
@@ -88,6 +83,3 @@ set_bash_prompt() {
 
 # Set PROMPT_COMMAND to use our function
 PROMPT_COMMAND=set_bash_prompt
-
-#prompt customization
-#PS1="\[\e[32m\]\u\[\e[0m\] \[\033[01;34m\]\w\[\033[00m\] "
