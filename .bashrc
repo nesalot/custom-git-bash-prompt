@@ -8,6 +8,13 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # History control
 HISTSIZE=10000
 HISTFILESIZE=20000
+HISTCONTROL=ignoreboth
+
+#append to history, don't overwrite
+shopt -s histappend
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
 
 # Color definitions (without PS1 escaping brackets)
 RED="\033[0;31m"
