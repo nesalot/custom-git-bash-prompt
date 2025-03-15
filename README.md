@@ -8,4 +8,18 @@ I have spent countless hours building out a custom `.bashrc` file instead of usi
 - Windows Terminal
 - Warp for Windows (which I've been loving the AI features)
 
-#### Once I get it more finalized I will come back and add screenshots for visual reference. 
+#### 3/15 Current Setup
+![2025-03-15 07_22_58-proficient - Google Search](https://github.com/user-attachments/assets/510fc541-d91e-4019-a5ea-6a4ae32a5715)
+
+### Currently Showing:
+- Branch Name
+- Behind/Ahead Changes & Count
+- Staged Files
+- Unstaged Files
+- Untracked Files
+
+### Things I need to fix:
+- Move Staged Changes inside parentheses
+- Move Untracked Changes inside parentheses
+- De Clutter visually when multiple cases are true (color code better? Or better seperation?)
+- Add Nerd Font Icons
