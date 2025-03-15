@@ -12,9 +12,9 @@ I have spent countless hours building out a custom `.bashrc` file instead of usi
 ![2025-03-15 07_22_58-proficient - Google Search](https://github.com/user-attachments/assets/510fc541-d91e-4019-a5ea-6a4ae32a5715)<br>*Screenshot of Current WIP Bash Prompt*
 
 ### Currently Showing:
-- Username
-- Directory
-- Branch Name
+- Username (blue)
+- Directory (purple)
+- Branch Name (Green if branch matches repo, Yellow if changes are found)
 - Behind/Ahead Changes & Count
 - Staged Files
 - Unstaged Files
