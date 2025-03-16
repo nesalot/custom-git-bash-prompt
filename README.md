@@ -22,6 +22,8 @@ I have spent countless hours building out a custom `.bashrc` file instead of usi
 - Unstaged Files
 - Untracked Files
 
+  ---
+
 ### TODO List:
 - [X] Seperate Prompt Logic to be more modular
   - [X] Move Git Logic to it's own shell script
