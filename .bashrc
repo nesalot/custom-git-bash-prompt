@@ -1,22 +1,25 @@
-# Enable color support
-export TERM=xterm-256color
+# include .aliases if it exists
+if [ -f ~/.windows_aliases ]; then
+    . ~/.windows_aliases
+fi
 
-# Configure command line colors
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+# Set PROMPT_COMMAND to use our function
+PROMPT_COMMAND=set_bash_prompt
 
-# History control
+# Increase history size
 HISTSIZE=10000
 HISTFILESIZE=20000
+# Ignore duplicate commands and commands starting with space
 HISTCONTROL=ignoreboth
+# Add timestamp to history
+HISTTIMEFORMAT="%F %T "
 
 #append to history, don't overwrite
 shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-
-# Color definitions (without PS1 escaping brackets)
+# Color definitions
 RED="\033[0;31m"
 GREEN="\033[0;32m"
 BLUE="\033[0;34m"
@@ -87,6 +90,3 @@ set_bash_prompt() {
   # Add right arrow instead of dollar sign
   PS1+="${CYAN}→${RESET} "
 }
-
-# Set PROMPT_COMMAND to use our function
-PROMPT_COMMAND=set_bash_prompt
