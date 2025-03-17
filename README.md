@@ -17,10 +17,10 @@ I have spent countless hours building out a custom `.bashrc` file instead of usi
 - Username (blue)
 - Directory (purple)
 - Branch Name (Green if branch matches repo, Yellow if changes are found)
-- Behind/Ahead Changes & Count
-- Staged Files
-- Unstaged Files
-- Untracked Files
+- Behind/Ahead Changes w/Count
+- Staged Files w/Count
+- Unstaged Files w/Count
+- Untracked Files w/Count
 
   ---
 
