@@ -17,7 +17,7 @@ HISTCONTROL=ignoreboth
 # Add timestamp to history
 HISTTIMEFORMAT="%F %T "
 #  Add history immediately
-PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+PROMPT_COMMAND="history -a"
 
 #append to history, don't overwrite
 shopt -s histappend
