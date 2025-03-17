@@ -41,7 +41,7 @@ set_bash_prompt() {
   # Add git information if available
   local git_info=$(get_git_prompt)
   if [ -n "$git_info" ]; then
-    PS1+="$git_info"
+    PS1+="on $git_info"
   fi
   
   # Add right arrow instead of dollar sign
