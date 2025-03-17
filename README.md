@@ -41,6 +41,9 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 :v: Hope you enjoy! :v::
 
 ---
+
+<details>
+  <summary>Updates w/ Screenshots & TODO List</summary>
 ### Currently Showing:
 - Username (blue)
 - Directory (purple)
@@ -64,8 +67,11 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 
 ![2025-03-17 04_01_20- git_prompt sh - Cursor](https://github.com/user-attachments/assets/252a98d2-3b24-43d7-b01b-63e7ab2cd677)<br>Screenshot of work done today to create and separate configuration options from implementation logic
 
-  ---
 
+---
+
+<details>
+  <summary>My TODO List</summary>
 ### TODO List:
 - [X] Separate Prompt Logic to be more modular
   - [X] Move Git Logic to it's own shell script
@@ -88,7 +94,9 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 - [X] Replace variable names with more descriptive names (ex: `prompt_components` vs. `git_info`)
 - [X] Add detailed comments to explain each part/section for others
 - [ ] Play around with Background Color option vs no background and colored letters
+</details>
 
+</details>
   ---
 
 # Changelog
