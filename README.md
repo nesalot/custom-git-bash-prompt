@@ -130,6 +130,9 @@ Today was a big day! :fire: Added/Changed a lot with the below progress.
   - Reduced redundant command executions
 
 ## [1.1.0] - 03-16-2025
+### Added
+- Added "On" before branch name if found
+
 ### Changed
 - Separated prompt logic to be more modular
 - Moved Git Logic to it's own shell script called `.git_prompt`
