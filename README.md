@@ -55,7 +55,7 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 - Untracked Files
 
 #### 3/17 Current Setup
-![2025-03-17 03_59_02-Window](https://github.com/user-attachments/assets/f3c3c5c5-f0ab-4f4c-a2b3-241e6c40236c)<br>Screenshot of `DEBUG_MODE` & `TEST_MODE` turn on not inside a git branch, `DEBUG_MODE` echos out status variable values to the terminal while `TEST_MODE` sets up fake variables to test with so you don't have to recreate each scenario
+![2025-03-17 03_59_02-Window](https://github.com/user-attachments/assets/f3c3c5c5-f0ab-4f4c-a2b3-241e6c40236c)<br>Screenshot of `DEBUG_MODE` & `TEST_MODE` turn on not inside a git branch, `DEBUG_MODE` echos out status variable values to the terminal while `TEST_MODE` sets up fake variable values to test all status so you don't have to recreate each scenario
 
 <br>
 
