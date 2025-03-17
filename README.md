@@ -43,7 +43,7 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 ---
 
 #### 3/15 Current Setup
-![2025-03-15 07_22_58-proficient - Google Search](https://github.com/user-attachments/assets/510fc541-d91e-4019-a5ea-6a4ae32a5715)<br>-Screenshot of Current WIP Bash Prompt showing several cases for testing-
+![2025-03-15 07_22_58-proficient - Google Search](https://github.com/user-attachments/assets/510fc541-d91e-4019-a5ea-6a4ae32a5715)<br>Screenshot of Current WIP Bash Prompt showing several cases for testing
 
 ### Currently Showing:
 - Username (blue)
@@ -55,11 +55,13 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 - Untracked Files
 
 #### 3/17 Current Setup
-![2025-03-17 03_59_02-Window](https://github.com/user-attachments/assets/f3c3c5c5-f0ab-4f4c-a2b3-241e6c40236c)<br>-Screenshot of `DEBUG_MODE` & `TEST_MODE` turn on not inside a git branch, `DEBUG_MODE echos out status variable values to the terminal while `TEST_MODE` sets up fake variables to test with so you don't have to recreate each scenario-
+![2025-03-17 03_59_02-Window](https://github.com/user-attachments/assets/f3c3c5c5-f0ab-4f4c-a2b3-241e6c40236c)<br>Screenshot of `DEBUG_MODE` & `TEST_MODE` turn on not inside a git branch, `DEBUG_MODE echos out status variable values to the terminal while `TEST_MODE` sets up fake variables to test with so you don't have to recreate each scenario
 
-![2025-03-17 04_00_23-Window](https://github.com/user-attachments/assets/9d4a7cee-c604-4df9-b8c5-9c614a7bbce1)<br>-Screenshot of `DEBUG_MODE` turned on but `TEST_MODE` turn off inside a working git branch, Green branch name = no changes found, yellow branch name means changes found with included status for each found-
 
-![2025-03-17 04_01_20- git_prompt sh - Cursor](https://github.com/user-attachments/assets/252a98d2-3b24-43d7-b01b-63e7ab2cd677)<br>-Screenshot of work done today to create and separate configuration options from implementation logic-
+![2025-03-17 04_00_23-Window](https://github.com/user-attachments/assets/9d4a7cee-c604-4df9-b8c5-9c614a7bbce1)<br>Screenshot of `DEBUG_MODE` turned on but `TEST_MODE` turn off inside a working git branch, Green branch name = no changes found, yellow branch name means changes found with included status for each found
+
+
+![2025-03-17 04_01_20- git_prompt sh - Cursor](https://github.com/user-attachments/assets/252a98d2-3b24-43d7-b01b-63e7ab2cd677)<br>Screenshot of work done today to create and separate configuration options from implementation logic
 
   ---
 
