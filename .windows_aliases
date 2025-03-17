@@ -29,7 +29,9 @@ alias desktop='cd $HOME/Desktop'
 alias dev='cd $HOME/Dev'
 alias herd='cd $HOME/Herd'
 alias bashrc='code $HOME/.bashrc'
+alias vimconfig='vim $HOME/.vimrc'
 alias aliases='code $HOME/.windows_aliases'
+alias phpstorm='phpstorm . &'
 
 alias winsleep='cd $HOME/../../Windows/system32 & rundll32.exe powrprof.dll,SetSuspendState 0,1,0'
 
