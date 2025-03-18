@@ -97,6 +97,9 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 - [X] Replace variable names with more descriptive names (ex: `prompt_components` vs. `git_info`)
 - [X] Add detailed comments to explain each part/section for others
 - [ ] Play around with Background Color option vs no background and colored letters
+- [ ] Add a Simple/Clean Mode Setting that will turn off all status Icons & Counts, Only show a red X next to branch indicating not clean. Still keep the basic two color setting for green for clean, yellow for not clean with red X. 
+- [ ] Add an option with clean mode to show Colored > at end of prompt for each status.
+
   
 </details>
 
