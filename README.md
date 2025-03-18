@@ -55,13 +55,15 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 - Untracked Files
 
 <details>
-<summary>### 03-15-2025 Current Setup</summary>
+<summary><h3>03-15-2025 Initial Release Screenshot</h3></summary>
   
 ![2025-03-15 07_22_58-proficient - Google Search](https://github.com/user-attachments/assets/510fc541-d91e-4019-a5ea-6a4ae32a5715)<br>Screenshot of Current WIP Bash Prompt showing several cases for testing
 
 </details>
 
-### 03-17-2025 Current Setup
+<details>
+<summary><h3>03-17-2025 Implemented Test & Debug Mode along with Configuration Settings</h3></summary>
+
 ![2025-03-17 03_59_02-Window](https://github.com/user-attachments/assets/f3c3c5c5-f0ab-4f4c-a2b3-241e6c40236c)<br>Screenshot of `DEBUG_MODE` & `TEST_MODE` turn on not inside a git branch, `DEBUG_MODE` echos out status variable values to the terminal while `TEST_MODE` sets up fake variable values to test all status so you don't have to recreate each scenario
 
 <br>
@@ -72,9 +74,14 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 
 ![2025-03-17 04_01_20- git_prompt sh - Cursor](https://github.com/user-attachments/assets/252a98d2-3b24-43d7-b01b-63e7ab2cd677)<br>Screenshot of work done today to create and separate configuration options from implementation logic
 
-### 03-18-2025 Implemented Nerd Font Gylphs 
+</details>
+
+<details>
+<summary><h3>03-18-2025 Implemented Nerd Font Gylphs</h3></summary>
+ 
 ![2025-03-18 05_54_29-Window](https://github.com/user-attachments/assets/cb8d44a0-515f-49cc-a4df-dcdfde661684)<br>Screenshot of Nerd Font Glyphs set, plan to add more glyph sets to choose from
 
+</details>
 
 </details>
 
