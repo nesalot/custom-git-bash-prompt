@@ -55,8 +55,8 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 - Untracked Files
 
 <details>
-
-### 03-15-2025 Current Setup
+<summary>### 03-15-2025 Current Setup</summary>
+  
 ![2025-03-15 07_22_58-proficient - Google Search](https://github.com/user-attachments/assets/510fc541-d91e-4019-a5ea-6a4ae32a5715)<br>Screenshot of Current WIP Bash Prompt showing several cases for testing
 
 </details>
