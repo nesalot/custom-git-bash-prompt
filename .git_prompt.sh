@@ -18,8 +18,9 @@ get_git_prompt() {
   ######################################################################
 
   # Display options
-  local DEBUG_MODE=false           # Set to true to enable debug output
-  local TEST_MODE=false            # Set to true to show all indicators with sample values
+  local DEBUG_MODE=false            # Set to true to enable debug output
+  local TEST_MODE=false             # Set to true to show all indicators with sample values
+  local SHOW_NERDFONT_GLYPHS=false  # Set to true to use Nerd Font glyphs instead of text symbols
   
   # Status display toggles
   local SHOW_COUNTS=true          # Set to false to show only symbols without numbers
@@ -29,12 +30,21 @@ get_git_prompt() {
   local SHOW_AHEAD=true           # Display commits ahead of remote
   local SHOW_BEHIND=true          # Display commits behind remote
 
-  # Status symbols
-  local UNSTAGED_SYMBOL="!"
+  # Status symbols (defaults - will be overridden by Nerd Font glyphs if enabled)
+  local UNSTAGED_SYMBOL="-"
   local STAGED_SYMBOL="+"
   local UNTRACKED_SYMBOL="?"
   local AHEAD_SYMBOL="↑"
   local BEHIND_SYMBOL="↓"
+
+  # Use Nerd Font glyphs if enabled
+  if [ "$SHOW_NERDFONT_GLYPHS" = true ]; then
+  local UNSTAGED_SYMBOL="󰍷 "
+  local STAGED_SYMBOL=" "
+  local UNTRACKED_SYMBOL=" "
+  local AHEAD_SYMBOL=" "
+  local BEHIND_SYMBOL=" "
+  fi
 
   # Colors for different states
   local CLEAN_COLOR="$GREEN"
