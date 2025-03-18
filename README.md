@@ -68,6 +68,10 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 
 ![2025-03-17 04_01_20- git_prompt sh - Cursor](https://github.com/user-attachments/assets/252a98d2-3b24-43d7-b01b-63e7ab2cd677)<br>Screenshot of work done today to create and separate configuration options from implementation logic
 
+### 03-18-2025 Implemented Nerd Font Gylphs 
+![2025-03-18 05_42_07-Window](https://github.com/user-attachments/assets/ce5180b3-05b7-4817-9536-04abeeb0700e)<br>Screenshot of Nerd Font Glyphs set, plan to add more glyph sets to choose from
+
+
 </details>
 
 ---
@@ -107,6 +111,11 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 ---
 
 # Changelog
+
+## [1.3.0] - 03-18-2025
+### Added
+- Implemented Nerd Font Glyphs
+- Created config to toggle Nerd Fonts Glyphs on/off vs. standard icons
 
 ## [1.2.0] - 03-17-2025
 
