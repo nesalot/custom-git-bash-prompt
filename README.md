@@ -91,8 +91,9 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
   - [X] Show Status on/off Toggle - Create config at top of `.git_prompt` to show/hide individual status
   - [X] Create a `Test Mode` config in `.git_prompt` that will allow me to turn everything on for testing, all status will show even if none are true. 
   - [X] Create a `Debug Mode` in `.git_prompt` config that will output the count of each status 
-- [ ] Implement Nerd Font Icons
-  - [ ] Add Config to toggle these on/off OR use standard ↑ ↓ icons  
+- [X] Implement Nerd Font Icons
+  - [X] Add Config to toggle these on/off OR use standard ↑ ↓ icons
+  - [ ] Add more Nerd Icon sets to pick from (Group 1, Group 2, Group 3)
 - [X] Expand Color Options (Had 3, now have 7)
 - [X] Replace variable names with more descriptive names (ex: `prompt_components` vs. `git_info`)
 - [X] Add detailed comments to explain each part/section for others
