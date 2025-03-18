@@ -86,7 +86,7 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 ---
 
 <details open>
-<summary><h3>Screenshots</h3></summary>
+<summary><h3>Changelog Screenshots</h3></summary>
 
 <details>
 <summary><h3>03-18-2025 Implemented Nerd Font Gylphs</h3></summary>
