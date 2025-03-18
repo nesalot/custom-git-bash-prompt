@@ -69,7 +69,7 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 ![2025-03-17 04_01_20- git_prompt sh - Cursor](https://github.com/user-attachments/assets/252a98d2-3b24-43d7-b01b-63e7ab2cd677)<br>Screenshot of work done today to create and separate configuration options from implementation logic
 
 ### 03-18-2025 Implemented Nerd Font Gylphs 
-![2025-03-18 05_42_07-Window](https://github.com/user-attachments/assets/ce5180b3-05b7-4817-9536-04abeeb0700e)<br>Screenshot of Nerd Font Glyphs set, plan to add more glyph sets to choose from
+![2025-03-18 05_48_16-Window](https://github.com/user-attachments/assets/548823c3-3fb4-4322-8753-72c01205957a)<br>Screenshot of Nerd Font Glyphs set, plan to add more glyph sets to choose from
 
 
 </details>
