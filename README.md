@@ -4,6 +4,16 @@ I use MAC OS 90% of the time for Development work, Trying to also be proficient 
 
 I have spent countless hours building out a custom `.bashrc` file instead of using ZSH (because I wanted to learn) that will give me a custom terminal prompt that I enjoy that includes username, directory and git information. This was all coded by me for learning purposes.
 
+![423407701-9d4a7cee-c604-4df9-b8c5-9c614a7bbce1](https://github.com/user-attachments/assets/ad47bb31-b6af-4f9e-b9bb-407091d2a699)
+
+### Currently Showing:
+- Username (blue), Directory (purple)
+- Branch Name (Green if branch matches repo, Yellow if changes are found)
+- Behind/Ahead Changes
+- Staged Files
+- Unstaged Files
+- Untracked Files
+
 ## Windows Terminals I've been using:
 - Windows Terminal
 - Warp for Windows (which I've been loving the AI features)
@@ -42,55 +52,9 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 
 ---
 
-<details open>
-<summary>Screenshots</summary>
-  
-### Currently Showing:
-- Username (blue)
-- Directory (purple)
-- Branch Name (Green if branch matches repo, Yellow if changes are found)
-- Behind/Ahead Changes
-- Staged Files
-- Unstaged Files
-- Untracked Files
-
 <details>
-<summary><h3>03-15-2025 Initial Release Screenshot</h3></summary>
-  
-![2025-03-15 07_22_58-proficient - Google Search](https://github.com/user-attachments/assets/510fc541-d91e-4019-a5ea-6a4ae32a5715)<br>Screenshot of Current WIP Bash Prompt showing several cases for testing
+  <summary><h3>My TODO List</h3></summary>
 
-</details>
-
-<details>
-<summary><h3>03-17-2025 Implemented Test & Debug Mode along with Configuration Settings</h3></summary>
-
-![2025-03-17 03_59_02-Window](https://github.com/user-attachments/assets/f3c3c5c5-f0ab-4f4c-a2b3-241e6c40236c)<br>Screenshot of `DEBUG_MODE` & `TEST_MODE` turn on not inside a git branch, `DEBUG_MODE` echos out status variable values to the terminal while `TEST_MODE` sets up fake variable values to test all status so you don't have to recreate each scenario
-
-<br>
-
-![2025-03-17 04_00_23-Window](https://github.com/user-attachments/assets/9d4a7cee-c604-4df9-b8c5-9c614a7bbce1)<br>Screenshot of `DEBUG_MODE` turned on but `TEST_MODE` turn off inside a working git branch, Green branch name = no changes found, yellow branch name means changes found with included status for each found
-
-<br>
-
-![2025-03-17 04_01_20- git_prompt sh - Cursor](https://github.com/user-attachments/assets/252a98d2-3b24-43d7-b01b-63e7ab2cd677)<br>Screenshot of work done today to create and separate configuration options from implementation logic
-
-</details>
-
-<details>
-<summary><h3>03-18-2025 Implemented Nerd Font Gylphs</h3></summary>
- 
-![2025-03-18 05_54_29-Window](https://github.com/user-attachments/assets/cb8d44a0-515f-49cc-a4df-dcdfde661684)<br>Screenshot of Nerd Font Glyphs set, plan to add more glyph sets to choose from
-
-</details>
-
-</details>
-
----
-
-<details>
-  <summary>My TODO List</summary>
-  
-### TODO List:
 - [X] Separate Prompt Logic to be more modular
   - [X] Move Git Logic to it's own shell script
   - [X] Update .bashrc to only include basic logic
@@ -117,6 +81,42 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 - [ ] Add an option with clean mode to show Colored > at end of prompt for each status.
 
   
+</details>
+
+---
+
+<details open>
+<summary><h3>Screenshots</h3></summary>
+
+<details>
+<summary><h3>03-18-2025 Implemented Nerd Font Gylphs</h3></summary>
+ 
+![2025-03-18 05_54_29-Window](https://github.com/user-attachments/assets/cb8d44a0-515f-49cc-a4df-dcdfde661684)<br>Screenshot of Nerd Font Glyphs set, plan to add more glyph sets to choose from
+
+</details>
+
+<details>
+<summary><h3>03-17-2025 Implemented Test & Debug Mode along with Configuration Settings</h3></summary>
+
+![2025-03-17 03_59_02-Window](https://github.com/user-attachments/assets/f3c3c5c5-f0ab-4f4c-a2b3-241e6c40236c)<br>Screenshot of `DEBUG_MODE` & `TEST_MODE` turn on not inside a git branch, `DEBUG_MODE` echos out status variable values to the terminal while `TEST_MODE` sets up fake variable values to test all status so you don't have to recreate each scenario
+
+<br>
+
+![2025-03-17 04_00_23-Window](https://github.com/user-attachments/assets/9d4a7cee-c604-4df9-b8c5-9c614a7bbce1)<br>Screenshot of `DEBUG_MODE` turned on but `TEST_MODE` turn off inside a working git branch, Green branch name = no changes found, yellow branch name means changes found with included status for each found
+
+<br>
+
+![2025-03-17 04_01_20- git_prompt sh - Cursor](https://github.com/user-attachments/assets/252a98d2-3b24-43d7-b01b-63e7ab2cd677)<br>Screenshot of work done today to create and separate configuration options from implementation logic
+
+</details>
+
+<details>
+<summary><h3>03-15-2025 Initial Release Screenshot</h3></summary>
+  
+![2025-03-15 07_22_58-proficient - Google Search](https://github.com/user-attachments/assets/510fc541-d91e-4019-a5ea-6a4ae32a5715)<br>Screenshot of Current WIP Bash Prompt showing several cases for testing
+
+</details>
+
 </details>
 
 ---
