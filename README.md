@@ -77,7 +77,7 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 - [X] Replace variable names with more descriptive names (ex: `prompt_components` vs. `git_info`)
 - [X] Add detailed comments to explain each part/section for others
 - [ ] Play around with Background Color option vs no background and colored letters
-- [ ] Add a Simple/Clean Mode Setting that will turn off all status Icons & Counts, Only show a red X next to branch indicating not clean. Still keep the basic two color setting for green for clean, yellow for not clean with red X. 
+- [X] Add a Simple Mode Setting that will turn off all status Icons & Counts, Only show a red X next to branch indicating not clean. Still keep the basic two color setting for green for clean, yellow for not clean with red X. 
 - [ ] Add an option with clean mode to show Colored > at end of prompt for each status.
 
   
@@ -87,6 +87,13 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 
 <details open>
 <summary><h3>Changelog Screenshots</h3></summary>
+
+<details>
+<summary><h3>03-19-2025 Implemented Simple Mode</h3></summary>
+ 
+![2025-03-19 22_05_13-Window](https://github.com/user-attachments/assets/5dd904b4-11ad-40ae-821e-ef0fb589b2ce)<br>Screenshot of `SIMPLE_MODE` Setting that will turn off all status Icons & Counts, Only show a red X next to branch indicating not clean. Still keeping the basic two color setting for green for clean, yellow for not clean.
+
+</details>
 
 <details>
 <summary><h3>03-18-2025 Implemented Nerd Font Gylphs</h3></summary>
@@ -122,6 +129,11 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 ---
 
 # Changelog
+## [1.4.0] - 03-19-2025
+### Added
+- Implemented `SIMPLE_MODE` Setting that will turn off all status Icons & Counts, Still keeping the basic two color branch name setting (green for clean, yellow for not clean)
+- Created `SIMPLE_MODE` config option to toggle mode on/off
+- In `SIMPLE_MODE` since all status Icons & Counts were gone, added a Red "X" on right side of branch name when there is branch changes to visually see your not in sync. 
 
 ## [1.3.0] - 03-18-2025
 ### Added
