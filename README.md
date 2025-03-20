@@ -86,24 +86,24 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 ---
 
 <details open>
-<summary><h3>Changelog Screenshots</h3></summary>
+<summary><h2>Changelog Screenshots</h2></summary>
 
 <details>
-<summary><h3>03-19-2025 Implemented Simple Mode</h3></summary>
- 
+<summary><h4>03-19-2025 - Implemented Simple Mode</h4></summary>
+  
 ![2025-03-19 22_05_13-Window](https://github.com/user-attachments/assets/5dd904b4-11ad-40ae-821e-ef0fb589b2ce)<br>Screenshot of `SIMPLE_MODE` Setting that will turn off all status Icons & Counts, Only show a red X next to branch indicating not clean. Still keeping the basic two color setting for green for clean, yellow for not clean.
 
 </details>
 
 <details>
-<summary><h3>03-18-2025 Implemented Nerd Font Gylphs</h3></summary>
+<summary><h4>03-18-2025 - Implemented Nerd Font Gylphs</h4></summary>
  
 ![2025-03-18 05_54_29-Window](https://github.com/user-attachments/assets/cb8d44a0-515f-49cc-a4df-dcdfde661684)<br>Screenshot of Nerd Font Glyphs set, plan to add more glyph sets to choose from
 
 </details>
 
 <details>
-<summary><h3>03-17-2025 Implemented Test & Debug Mode along with Configuration Settings</h3></summary>
+<summary><h4>03-17-2025 - Implemented Test & Debug Mode along with Configuration Settings</h4></summary>
 
 ![2025-03-17 03_59_02-Window](https://github.com/user-attachments/assets/f3c3c5c5-f0ab-4f4c-a2b3-241e6c40236c)<br>Screenshot of `DEBUG_MODE` & `TEST_MODE` turn on not inside a git branch, `DEBUG_MODE` echos out status variable values to the terminal while `TEST_MODE` sets up fake variable values to test all status so you don't have to recreate each scenario
 
@@ -118,7 +118,7 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 </details>
 
 <details>
-<summary><h3>03-15-2025 Initial Release Screenshot</h3></summary>
+<summary><h4>03-15-2025 - Initial Release Screenshot</h4></summary>
   
 ![2025-03-15 07_22_58-proficient - Google Search](https://github.com/user-attachments/assets/510fc541-d91e-4019-a5ea-6a4ae32a5715)<br>Screenshot of Current WIP Bash Prompt showing several cases for testing
 
@@ -128,19 +128,30 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 
 ---
 
-# Changelog
-## [1.4.0] - 03-19-2025
+<details open>
+<summary><h2>Changelog</h2></summary>
+
+<details>
+<summary><h4>[1.4.0] - 03-19-2025</h4></summary>
+
 ### Added
 - Implemented `SIMPLE_MODE` Setting that will turn off all status Icons & Counts, Still keeping the basic two color branch name setting (green for clean, yellow for not clean)
 - Created `SIMPLE_MODE` config option to toggle mode on/off
-- In `SIMPLE_MODE` since all status Icons & Counts were gone, added a Red "X" on right side of branch name when there is branch changes to visually see your not in sync. 
+- In `SIMPLE_MODE` since all status Icons & Counts were gone, added a Red "X" on right side of branch name when there is branch changes to visually see your not in sync.
 
-## [1.3.0] - 03-18-2025
+</details>
+
+<details>
+<summary><h4>[1.3.0] - 03-18-2025</h4></summary>
+
 ### Added
 - Implemented Nerd Font Glyphs
 - Created config to toggle Nerd Fonts Glyphs on/off vs. standard icons
 
-## [1.2.0] - 03-17-2025
+</details>
+
+<details>
+<summary><h4>[1.2.0] - 03-17-2025</h4></summary>
 
 Today was a big day! :fire: Added/Changed a lot with the below progress. 
 
@@ -174,8 +185,12 @@ Today was a big day! :fire: Added/Changed a lot with the below progress.
   - Added conditional execution for expensive remote status checks
   - Implemented early return for directories not under git control
   - Reduced redundant command executions
+ 
+</details>
 
-## [1.1.0] - 03-16-2025
+<details>
+<summary><h4>[1.1.0] - 03-16-2025</h4></summary>
+  
 ### Added
 - Added "On" before branch name if found
 
@@ -186,5 +201,14 @@ Today was a big day! :fire: Added/Changed a lot with the below progress.
 - Source `.git_prompt` and append to PS1
 - Moved Staged Changes inside branch parentheses
 - Moved Untracked changes inside branch parentheses
-## [1.0.0] - 03-15-2025
+
+</details>
+
+<details>
+<summary><h4>[1.0.0] - 03-15-2025</h4></summary>
+  
 ### Initial Release
+
+</details>
+
+</details>
