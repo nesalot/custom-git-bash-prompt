@@ -20,7 +20,7 @@ get_git_prompt() {
   # Display options
   local DEBUG_MODE=false             # Set to true to enable debug output
   local TEST_MODE=false              # Set to true to show all indicators with sample values
-  local SHOW_NERDFONT_GLYPHS=false   # Set to true to use Nerd Font glyphs instead of text symbols
+  local SHOW_NERDFONT_GLYPHS=true   # Set to true to use Nerd Font glyphs instead of text symbols
   local SIMPLE_MODE=false            # Set to true for minimal display (just branch name with color)
   
   # Status display toggles - these will be overridden if SIMPLE_MODE is true
@@ -50,11 +50,11 @@ get_git_prompt() {
 
   # Use Nerd Font glyphs if enabled
   if [ "$SHOW_NERDFONT_GLYPHS" = true ]; then
-  local UNSTAGED_SYMBOL="󰍷 "
-  local STAGED_SYMBOL=" "
-  local UNTRACKED_SYMBOL=" "
-  local AHEAD_SYMBOL=" "
-  local BEHIND_SYMBOL=" "
+   local UNSTAGED_SYMBOL="󰍷 "
+   local STAGED_SYMBOL=" "
+   local UNTRACKED_SYMBOL=" "
+   local AHEAD_SYMBOL=" "
+   local BEHIND_SYMBOL=" "
   fi
 
   # Colors for different states
