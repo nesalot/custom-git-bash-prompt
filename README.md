@@ -15,7 +15,7 @@ I have spent countless hours building out a custom `.bashrc` file instead of usi
 - Nerd Font Glyphs - Removes standard status icons and uses Nerd Font Glyphs instead. [Need to install Nerd Font Glyphs to work](https://www.nerdfonts.com/#home)
 - Debug Mode - Outputs branch & all status counts to terminal
 - Test Mode - Shows all status icons & counts with sample values
-- Simple Mode - Turns off all status icons & counts, Only showing a red X next to branch indicating not clean. Keeping branch color settings (green for clean, yellow for not clean)
+- Simple Mode - Turns off all status icons & counts, Only showing a red X next to branch indicating not clean. Keeping branch color settings (green for clean, yellow for changes)
 - Fully Configurable Options - Able to toggle each individual or all status icons or counts on/off
 
 ---
