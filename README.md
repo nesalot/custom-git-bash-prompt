@@ -12,7 +12,7 @@ I have spent countless hours building out a custom `.bashrc` file instead of usi
 - Behind (↓) & Ahead (↑) Status
 - Staged (+) & Unstaged (-) Status
 - Untracked (?) Status
-- Nerd Font Glyphs - Removes standard status icons and uses Nerd Font Glyphs instead. [Need to install Nerd Font Glyphs to work](https://www.nerdfonts.com/#home)
+- Nerd Font Glyphs - Removes standard status icons and uses Nerd Font Glyphs instead. [Need to install Nerd Font to work](https://www.nerdfonts.com/#home)
 - Debug Mode - Outputs branch & all status counts to terminal
 - Test Mode - Shows all status icons & counts with sample values
 - Simple Mode - Turns off all status icons & counts, Only showing a red X next to branch indicating not clean. Keeping branch color settings (green for clean, yellow for changes)
