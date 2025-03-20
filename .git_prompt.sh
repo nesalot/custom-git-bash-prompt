@@ -18,17 +18,28 @@ get_git_prompt() {
   ######################################################################
 
   # Display options
-  local DEBUG_MODE=false            # Set to true to enable debug output
-  local TEST_MODE=false             # Set to true to show all indicators with sample values
-  local SHOW_NERDFONT_GLYPHS=false  # Set to true to use Nerd Font glyphs instead of text symbols
+  local DEBUG_MODE=false             # Set to true to enable debug output
+  local TEST_MODE=false              # Set to true to show all indicators with sample values
+  local SHOW_NERDFONT_GLYPHS=false   # Set to true to use Nerd Font glyphs instead of text symbols
+  local SIMPLE_MODE=false            # Set to true for minimal display (just branch name with color)
   
-  # Status display toggles
+  # Status display toggles - these will be overridden if SIMPLE_MODE is true
   local SHOW_COUNTS=true          # Set to false to show only symbols without numbers
   local SHOW_UNSTAGED=true        # Display unstaged changes
   local SHOW_STAGED=true          # Display staged changes
   local SHOW_UNTRACKED=true       # Display untracked files
   local SHOW_AHEAD=true           # Display commits ahead of remote
   local SHOW_BEHIND=true          # Display commits behind remote
+
+  # Apply simple mode settings if enabled
+  if [ "$SIMPLE_MODE" = true ]; then
+    SHOW_COUNTS="false"
+    SHOW_UNSTAGED="false"
+    SHOW_STAGED="false"
+    SHOW_UNTRACKED="false"
+    SHOW_AHEAD="false"
+    SHOW_BEHIND="false"
+  fi
 
   # Status symbols (defaults - will be overridden by Nerd Font glyphs if enabled)
   local UNSTAGED_SYMBOL="-"
@@ -40,10 +51,10 @@ get_git_prompt() {
   # Use Nerd Font glyphs if enabled
   if [ "$SHOW_NERDFONT_GLYPHS" = true ]; then
   local UNSTAGED_SYMBOL="󰍷 "
-  local STAGED_SYMBOL=" "
-  local UNTRACKED_SYMBOL=" "
-  local AHEAD_SYMBOL=" "
-  local BEHIND_SYMBOL=" "
+  local STAGED_SYMBOL=" "
+  local UNTRACKED_SYMBOL=" "
+  local AHEAD_SYMBOL=" "
+  local BEHIND_SYMBOL=" "
   fi
 
   # Colors for different states
@@ -115,12 +126,22 @@ get_git_prompt() {
   local branch_color="$CLEAN_COLOR"
   local has_changes=false
   
-  # Check if any changes exist that we're configured to care about
-  if [ "$SHOW_UNSTAGED" = true ] && [ "$unstaged" -gt 0 ]; then has_changes=true; fi
-  if [ "$SHOW_STAGED" = true ] && [ "$staged" -gt 0 ]; then has_changes=true; fi
-  if [ "$SHOW_UNTRACKED" = true ] && [ "$untracked" -gt 0 ]; then has_changes=true; fi
-  if [ "$SHOW_AHEAD" = true ] && [ "$ahead" -gt 0 ]; then has_changes=true; fi
-  if [ "$SHOW_BEHIND" = true ] && [ "$behind" -gt 0 ]; then has_changes=true; fi
+  # Check if any changes exist
+  # If in SIMPLE_MODE, check all changes regardless of display settings
+  # Otherwise, only check changes we're configured to display
+  if [ "$SIMPLE_MODE" = true ]; then
+    # Always check all changes in simple mode for coloring
+    if [ "$unstaged" -gt 0 ] || [ "$staged" -gt 0 ] || [ "$untracked" -gt 0 ] || [ "$ahead" -gt 0 ] || [ "$behind" -gt 0 ]; then
+      has_changes=true
+    fi
+  else
+    # Only check changes we're configured to display
+    if [ "$SHOW_UNSTAGED" = true ] && [ "$unstaged" -gt 0 ]; then has_changes=true; fi
+    if [ "$SHOW_STAGED" = true ] && [ "$staged" -gt 0 ]; then has_changes=true; fi
+    if [ "$SHOW_UNTRACKED" = true ] && [ "$untracked" -gt 0 ]; then has_changes=true; fi
+    if [ "$SHOW_AHEAD" = true ] && [ "$ahead" -gt 0 ]; then has_changes=true; fi
+    if [ "$SHOW_BEHIND" = true ] && [ "$behind" -gt 0 ]; then has_changes=true; fi
+  fi
 
   # Set branch color based on change status
   if [ "$has_changes" = true ]; then
@@ -130,22 +151,32 @@ get_git_prompt() {
   # Always start with branch name in its appropriate color
   prompt_components+=("${branch_color}${branch}${RESET}")
 
+  # Add a red X for simple mode when changes exist
+  if [ "$SIMPLE_MODE" = true ] && [ "$has_changes" = true ]; then
+    prompt_components+=("${RED}×${RESET}")
+  fi
+
   # Add file status indicators with appropriate colors if enabled
-  [ "$SHOW_UNSTAGED" = true ] && [ "$unstaged" -gt 0 ] && \
+  if [ "$SHOW_UNSTAGED" = true ] && [ "$unstaged" -gt 0 ]; then
     prompt_components+=($(format_count "$UNSTAGED_SYMBOL" "$unstaged" "$UNSTAGED_COLOR"))
+  fi
   
-  [ "$SHOW_STAGED" = true ] && [ "$staged" -gt 0 ] && \
+  if [ "$SHOW_STAGED" = true ] && [ "$staged" -gt 0 ]; then
     prompt_components+=($(format_count "$STAGED_SYMBOL" "$staged" "$STAGED_COLOR"))
+  fi
   
-  [ "$SHOW_UNTRACKED" = true ] && [ "$untracked" -gt 0 ] && \
+  if [ "$SHOW_UNTRACKED" = true ] && [ "$untracked" -gt 0 ]; then
     prompt_components+=($(format_count "$UNTRACKED_SYMBOL" "$untracked" "$UNTRACKED_COLOR"))
+  fi
 
   # Show ahead/behind status if enabled
-  [ "$SHOW_AHEAD" = true ] && [ "$ahead" -gt 0 ] && \
+  if [ "$SHOW_AHEAD" = true ] && [ "$ahead" -gt 0 ]; then
     prompt_components+=($(format_count "$AHEAD_SYMBOL" "$ahead" "$AHEAD_COLOR"))
+  fi
   
-  [ "$SHOW_BEHIND" = true ] && [ "$behind" -gt 0 ] && \
+  if [ "$SHOW_BEHIND" = true ] && [ "$behind" -gt 0 ]; then
     prompt_components+=($(format_count "$BEHIND_SYMBOL" "$behind" "$BEHIND_COLOR"))
+  fi
 
   # Join all parts with spaces
   local branch_info="${prompt_components[*]}"
