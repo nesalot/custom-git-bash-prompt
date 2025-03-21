@@ -16,6 +16,7 @@ I have spent countless hours building out a custom `.bashrc` file instead of usi
 - Debug Mode - Outputs branch & all status counts to terminal
 - Test Mode - Shows all status icons & counts with sample values
 - Simple Mode - Turns off all status icons & counts, Only showing a red X next to branch indicating not clean. Keeping branch color settings (green for clean, yellow for changes)
+- Compact Mode - Turns off all status icons & counts, Keeping branch color settings (green for clean, yellow for changes) Shows a Colored ❱ at end of prompt for each status instead.
 - Fully Configurable Options - Able to toggle each individual or all status icons or counts on/off
 
 ---
