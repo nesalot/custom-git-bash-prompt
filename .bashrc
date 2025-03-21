@@ -43,9 +43,6 @@ set_bash_prompt() {
   if [ -n "$git_info" ]; then
     PS1+="on $git_info"
   fi
-  
-  # Add right arrow instead of dollar sign
-  PS1+="${CYAN}→${RESET} "
 }
 
 # Set PROMPT_COMMAND to use our function
