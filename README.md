@@ -144,7 +144,7 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 <summary><h2>Changelog</h2></summary>
 
 <details>
-<summary><h4>[1.5] - 03-21-2025</h4></summary>
+<summary><h4>[1.5.5] - 03-21-2025</h4></summary>
 
 ### Changed
 - Removed arrow on right side of prompt to clean up prompt, didnt feel like it was needed and looks cleaner without.
@@ -153,7 +153,7 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 </details>
 
 <details>
-<summary><h4>[1.4.5] - 03-20-2025</h4></summary>
+<summary><h4>[1.5.0] - 03-20-2025</h4></summary>
 
 ### Added
 - Implemented `SIMPLE_MODE` Setting that will turn off all status Icons & Counts, Still keeping the basic two color branch name setting (green for clean, yellow for not clean)
