@@ -146,10 +146,19 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 <details>
 <summary><h4>[1.5] - 03-20-2025</h4></summary>
 
+### Changed
+- Removed arrow on right side of prompt to clean up prompt, didnt feel like it was needed and looks cleaner without.
+- Cleaned up redundancy between the compact mode and normal mode code. 
+
+</details>
+
+<details>
+<summary><h4>[1.4.5] - 03-20-2025</h4></summary>
+
 ### Added
-- Implemented `COMPACT_MODE` Setting that will turn off all status Icons & Counts, Still keeping the basic two color branch name setting (green for clean, yellow for not clean)
-- Created `COMPACT_MODE` config option to toggle mode on/off
-- In `COMPACT_MODE` Shows a Colored ❱ at end of prompt for each status.
+- Implemented `SIMPLE_MODE` Setting that will turn off all status Icons & Counts, Still keeping the basic two color branch name setting (green for clean, yellow for not clean)
+- Created `SIMPLE_MODE` config option to toggle mode on/off
+- In `SIMPLE_MODE` since all status Icons & Counts were gone, added a Red "X" on right side of branch name when there is branch changes to visually see your not in sync.
 
 </details>
 
