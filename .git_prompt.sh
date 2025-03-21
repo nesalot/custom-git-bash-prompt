@@ -8,6 +8,7 @@ RED="\033[0;31m"
 PURPLE="\033[0;35m"
 CYAN="\033[0;36m"
 ORANGE="\033[38;5;208m"
+MAGENTA="\033[38;5;201m"
 RESET="\033[0m"
 
 # Function to get Git prompt information
@@ -20,8 +21,9 @@ get_git_prompt() {
   # Display options
   local DEBUG_MODE=false             # Set to true to enable debug output
   local TEST_MODE=false              # Set to true to show all indicators with sample values
-  local SHOW_NERDFONT_GLYPHS=true   # Set to true to use Nerd Font glyphs instead of text symbols
+  local SHOW_NERDFONT_GLYPHS=false   # Set to true to use Nerd Font glyphs instead of text symbols
   local SIMPLE_MODE=false            # Set to true for minimal display (just branch name with color)
+  local COMPACT_MODE=false           # Set to true for compact display (bold indicators after parentheses)
   
   # Status display toggles - these will be overridden if SIMPLE_MODE is true
   local SHOW_COUNTS=true          # Set to false to show only symbols without numbers
@@ -32,7 +34,7 @@ get_git_prompt() {
   local SHOW_BEHIND=true          # Display commits behind remote
 
   # Apply simple mode settings if enabled
-  if [ "$SIMPLE_MODE" = true ]; then
+  if [ "$SIMPLE_MODE" = true ] || [ "$COMPACT_MODE" = true ]; then
     SHOW_COUNTS="false"
     SHOW_UNSTAGED="false"
     SHOW_STAGED="false"
@@ -47,6 +49,7 @@ get_git_prompt() {
   local UNTRACKED_SYMBOL="?"
   local AHEAD_SYMBOL="↑"
   local BEHIND_SYMBOL="↓"
+  local COMPACT_INDICATOR="❱"
 
   # Use Nerd Font glyphs if enabled
   if [ "$SHOW_NERDFONT_GLYPHS" = true ]; then
@@ -60,7 +63,7 @@ get_git_prompt() {
   # Colors for different states
   local CLEAN_COLOR="$GREEN"
   local MODIFIED_COLOR="$YELLOW"
-  local UNTRACKED_COLOR="$BLUE"
+  local UNTRACKED_COLOR="$MAGENTA"
   local AHEAD_COLOR="$CYAN"
   local BEHIND_COLOR="$PURPLE"
   local STAGED_COLOR="$ORANGE"
@@ -127,20 +130,8 @@ get_git_prompt() {
   local has_changes=false
   
   # Check if any changes exist
-  # If in SIMPLE_MODE, check all changes regardless of display settings
-  # Otherwise, only check changes we're configured to display
-  if [ "$SIMPLE_MODE" = true ]; then
-    # Always check all changes in simple mode for coloring
-    if [ "$unstaged" -gt 0 ] || [ "$staged" -gt 0 ] || [ "$untracked" -gt 0 ] || [ "$ahead" -gt 0 ] || [ "$behind" -gt 0 ]; then
-      has_changes=true
-    fi
-  else
-    # Only check changes we're configured to display
-    if [ "$SHOW_UNSTAGED" = true ] && [ "$unstaged" -gt 0 ]; then has_changes=true; fi
-    if [ "$SHOW_STAGED" = true ] && [ "$staged" -gt 0 ]; then has_changes=true; fi
-    if [ "$SHOW_UNTRACKED" = true ] && [ "$untracked" -gt 0 ]; then has_changes=true; fi
-    if [ "$SHOW_AHEAD" = true ] && [ "$ahead" -gt 0 ]; then has_changes=true; fi
-    if [ "$SHOW_BEHIND" = true ] && [ "$behind" -gt 0 ]; then has_changes=true; fi
+  if [ "$unstaged" -gt 0 ] || [ "$staged" -gt 0 ] || [ "$untracked" -gt 0 ] || [ "$ahead" -gt 0 ] || [ "$behind" -gt 0 ]; then
+    has_changes=true
   fi
 
   # Set branch color based on change status
@@ -156,26 +147,50 @@ get_git_prompt() {
     prompt_components+=("${RED}×${RESET}")
   fi
 
-  # Add file status indicators with appropriate colors if enabled
-  if [ "$SHOW_UNSTAGED" = true ] && [ "$unstaged" -gt 0 ]; then
-    prompt_components+=($(format_count "$UNSTAGED_SYMBOL" "$unstaged" "$UNSTAGED_COLOR"))
-  fi
-  
-  if [ "$SHOW_STAGED" = true ] && [ "$staged" -gt 0 ]; then
-    prompt_components+=($(format_count "$STAGED_SYMBOL" "$staged" "$STAGED_COLOR"))
-  fi
-  
-  if [ "$SHOW_UNTRACKED" = true ] && [ "$untracked" -gt 0 ]; then
-    prompt_components+=($(format_count "$UNTRACKED_SYMBOL" "$untracked" "$UNTRACKED_COLOR"))
-  fi
+  # For COMPACT_MODE, build compact indicators more efficiently
+  if [ "$COMPACT_MODE" = true ]; then
+    # Create a space-separated array of status checks
+    local status_checks=()
+    [ "$unstaged" -gt 0 ] && status_checks+=("$UNSTAGED_COLOR")
+    [ "$staged" -gt 0 ] && status_checks+=("$STAGED_COLOR")
+    [ "$untracked" -gt 0 ] && status_checks+=("$UNTRACKED_COLOR")
+    [ "$ahead" -gt 0 ] && status_checks+=("$AHEAD_COLOR")
+    [ "$behind" -gt 0 ] && status_checks+=("$BEHIND_COLOR")
+    
+    local compact_indicators=""
+    
+    # Only add a space before the first indicator
+    if [ ${#status_checks[@]} -gt 0 ]; then
+      compact_indicators+=" "
+      
+      # Add each indicator with its color
+      for color in "${status_checks[@]}"; do
+        compact_indicators+="${color}${COMPACT_INDICATOR}${RESET}"
+      done
+    fi
+  else {
+    # Add file status indicators with appropriate colors if enabled (normal mode)
+    if [ "$SHOW_UNSTAGED" = true ] && [ "$unstaged" -gt 0 ]; then
+      prompt_components+=($(format_count "$UNSTAGED_SYMBOL" "$unstaged" "$UNSTAGED_COLOR"))
+    fi
+    
+    if [ "$SHOW_STAGED" = true ] && [ "$staged" -gt 0 ]; then
+      prompt_components+=($(format_count "$STAGED_SYMBOL" "$staged" "$STAGED_COLOR"))
+    fi
+    
+    if [ "$SHOW_UNTRACKED" = true ] && [ "$untracked" -gt 0 ]; then
+      prompt_components+=($(format_count "$UNTRACKED_SYMBOL" "$untracked" "$UNTRACKED_COLOR"))
+    fi
 
-  # Show ahead/behind status if enabled
-  if [ "$SHOW_AHEAD" = true ] && [ "$ahead" -gt 0 ]; then
-    prompt_components+=($(format_count "$AHEAD_SYMBOL" "$ahead" "$AHEAD_COLOR"))
-  fi
-  
-  if [ "$SHOW_BEHIND" = true ] && [ "$behind" -gt 0 ]; then
-    prompt_components+=($(format_count "$BEHIND_SYMBOL" "$behind" "$BEHIND_COLOR"))
+    # Show ahead/behind status if enabled
+    if [ "$SHOW_AHEAD" = true ] && [ "$ahead" -gt 0 ]; then
+      prompt_components+=($(format_count "$AHEAD_SYMBOL" "$ahead" "$AHEAD_COLOR"))
+    fi
+    
+    if [ "$SHOW_BEHIND" = true ] && [ "$behind" -gt 0 ]; then
+      prompt_components+=($(format_count "$BEHIND_SYMBOL" "$behind" "$BEHIND_COLOR"))
+    fi
+  }
   fi
 
   # Join all parts with spaces
@@ -192,8 +207,12 @@ get_git_prompt() {
     echo "DEBUG: branch=$branch unstaged=$unstaged staged=$staged untracked=$untracked ahead=$ahead behind=$behind" >&2
   fi
 
-  # Return formatted git prompt
-  echo "${color}(${RESET}${branch_info}${color})${RESET} "
+  # Return formatted git prompt with compact indicators if enabled
+  if [ "$COMPACT_MODE" = true ]; then
+    echo "${color}(${RESET}${branch_info}${color})${RESET}${compact_indicators} "
+  else
+    echo "${color}(${RESET}${branch_info}${color})${RESET} "
+  fi
 }
 
 # Export the function so it's available to bash
