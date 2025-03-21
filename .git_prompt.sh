@@ -158,7 +158,7 @@ get_git_prompt() {
     [ "$behind" -gt 0 ] && status_checks+=("$BEHIND_COLOR")
     
     local compact_indicators=""
-    
+
     # Only add a space before the first indicator
     if [ ${#status_checks[@]} -gt 0 ]; then
       compact_indicators+=" "
@@ -168,7 +168,7 @@ get_git_prompt() {
         compact_indicators+="${color}${COMPACT_INDICATOR}${RESET}"
       done
     fi
-  else {
+  else
     # Add file status indicators with appropriate colors if enabled (normal mode)
     if [ "$SHOW_UNSTAGED" = true ] && [ "$unstaged" -gt 0 ]; then
       prompt_components+=($(format_count "$UNSTAGED_SYMBOL" "$unstaged" "$UNSTAGED_COLOR"))
@@ -190,7 +190,6 @@ get_git_prompt() {
     if [ "$SHOW_BEHIND" = true ] && [ "$behind" -gt 0 ]; then
       prompt_components+=($(format_count "$BEHIND_SYMBOL" "$behind" "$BEHIND_COLOR"))
     fi
-  }
   fi
 
   # Join all parts with spaces
