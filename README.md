@@ -144,7 +144,7 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 <summary><h2>Changelog</h2></summary>
 
 <details>
-<summary><h4>[1.5] - 03-20-2025</h4></summary>
+<summary><h4>[1.5] - 03-21-2025</h4></summary>
 
 ### Changed
 - Removed arrow on right side of prompt to clean up prompt, didnt feel like it was needed and looks cleaner without.
