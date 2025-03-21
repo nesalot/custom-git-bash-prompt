@@ -84,7 +84,7 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 - [X] Add detailed comments to explain each part/section for others
 - [ ] Play around with Background Color option vs no background and colored letters
 - [X] Add a Simple Mode Setting that will turn off all status Icons & Counts, Only show a red X next to branch indicating not clean. Still keep the basic two color setting for green for clean, yellow for not clean with red X. 
-- [ ] Add an option with clean mode to show Colored > at end of prompt for each status.
+- [X] Add an option with compact mode to show Colored > at end of prompt for each status.
 
   
 </details>
@@ -95,10 +95,15 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 <summary><h2>Changelog Screenshots</h2></summary>
 
 <details>
+<summary><h4>03-20-2025 - Implemented Compact Mode</h4></summary>
+  
+![2025-03-20 23_42_44-Window](https://github.com/user-attachments/assets/038ae228-c4d0-443d-ac2a-c77fd0c20590)<br>Screenshot of `COMPACT_MODE` Setting that will turn off all status Icons & Counts, Shows a Colored ❱ at end of prompt for each status.
+</details>
+
+<details>
 <summary><h4>03-19-2025 - Implemented Simple Mode</h4></summary>
   
 ![2025-03-19 22_05_13-Window](https://github.com/user-attachments/assets/5dd904b4-11ad-40ae-821e-ef0fb589b2ce)<br>Screenshot of `SIMPLE_MODE` Setting that will turn off all status Icons & Counts, Only show a red X next to branch indicating not clean. Still keeping the basic two color setting for green for clean, yellow for not clean.
-
 </details>
 
 <details>
@@ -136,6 +141,16 @@ See my [`.bashrc`](https://github.com/nesalot/windows_bash/blob/main/.bashrc) fo
 
 <details open>
 <summary><h2>Changelog</h2></summary>
+
+<details>
+<summary><h4>[1.5] - 03-20-2025</h4></summary>
+
+### Added
+- Implemented `COMPACT_MODE` Setting that will turn off all status Icons & Counts, Still keeping the basic two color branch name setting (green for clean, yellow for not clean)
+- Created `COMPACT_MODE` config option to toggle mode on/off
+- In `COMPACT_MODE` Shows a Colored ❱ at end of prompt for each status.
+
+</details>
 
 <details>
 <summary><h4>[1.4.0] - 03-19-2025</h4></summary>
